@@ -26,20 +26,10 @@ for i, carro_km in enumerate(carros_km, start=1):
 
 print('Relatório Final:\r\n')
 
-#for j, carro_km in enumerate(carros_km, start=1):
- #   for k in range(len(km_lt)):
-
-   #    consumo_carro = km_total / carro_km[1]
-    #    custo = consumo_carro * km_p_lt
-
-        #print(f'{j} -  {k+1} - {carro_km[0]} - {km_lt[k]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
 
 
-consumo_carro = km_total / carro_km[1]
-custo = consumo_carro * km_p_lt
+for i, carro_km in enumerate(carros_km,start=1):
+    consumo_carro = km_total / carro_km[1]
+    custo = consumo_carro * km_p_lt
+    print(f'{i} - {carro_km[0]} - {carro_km[1]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
 
-print(f'1 -  {carros[0]} - {km_lt[0]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
-print(f'2 -  {carros[1]} - {km_lt[1]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
-print(f'3 -  {carros[2]} - {km_lt[2]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
-print(f'4 -  {carros[3]} - {km_lt[3]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
-print(f'5 -  {carros[4]} - {km_lt[4]} - {consumo_carro:.2f} - R$ {custo:.2f}\r\n')
