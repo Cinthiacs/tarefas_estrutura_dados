@@ -1,9 +1,5 @@
-'''2) Escreva um programa em PYTHON que leia números inteiros e só armazene
-aqueles que forem pares em uma LISTA ENCADEADA. A entrada de dados deve
-ser interrompida quando o usuário informar o número zero ou esgotar a
-quantidade definida de elementos a serem armazenados na estrutura. Por
-último, imprima os elementos existentes na lista encadeada criada.
-'''
+'''2) Crie um método na classe já implementada que some todos os valores
+ÍMPARES de uma lista encadeada e retorne o valor dessa soma.'''
 
 #Criando nó na lista
 class NodeList:
@@ -18,16 +14,20 @@ class ListaEncadeada:
     def __repr__(self):
         nodes = []
         current_node = self.head
+
         while current_node:
             nodes.append(str(current_node.data))
             current_node = current_node.next
         return '[' + ' | '.join(nodes) + ']'
     
     def insert_before(self,new_data):
+
         new_node = NodeList(new_data)
         new_node.next = self.head
         self.head = new_node
+
 lista = ListaEncadeada()
+soma_impares = 0 #Variável para armazenar o valor da soma dos ímpares
 
 while True:
 
@@ -36,13 +36,16 @@ while True:
     
     try:
         escolha_usu = int(escolha_usu)
-        if escolha_usu %2 == 0:
-            print(f'O número {escolha_usu} é par, então será inserido na lista\r\n')
-            lista.insert_before(escolha_usu) 
+        if escolha_usu % 2 != 0:
+            print(f'O número {escolha_usu} é impar, então será inserido na lista\r\n')
+            lista.insert_before(escolha_usu)
+           
+            soma_impares += escolha_usu
             print(lista)
+            print(f'Soma dos números ímpares inseridos: {soma_impares}')
 
         else:
-            print(f'O número {escolha_usu} não é par, então será inserido na lista')
+            print(f'O número {escolha_usu}, é par, então será ignorado.')
 
 
     except ValueError:
