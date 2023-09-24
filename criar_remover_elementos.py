@@ -53,5 +53,3 @@ while not pilha.isEmpty():
     
    
 print(f'A sequencia da Lista Encadeada é: {lista}\r\n')
-
-
